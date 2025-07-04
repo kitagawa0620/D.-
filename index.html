@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>ToDoアプリ</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>My ToDo App</h1>
+<!-- Vueで指定された"app"要素、この中でのみVueが有効 -->
+<div id="app">
+  <input v-model:value="task" placeholder="タスクを入力…"><br>
+  タスク内容：{{ task }}
+  <button v-on:click="addTask">追加</button><br>
+  <button v-on:click="clearAll">全てのToDoをクリア</button><br>
+  <p v-for="todo in todoList">{{ todo }}</p>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
